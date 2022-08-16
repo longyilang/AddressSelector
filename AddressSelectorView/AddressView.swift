@@ -69,7 +69,9 @@ extension AddressView{
         }
         self.tblView.reloadData()
     }
-    
+}
+
+extension AddressView{
     func setData(data: Any){
         var dataArr: [RegionModel] = []
         if data is AddressModel {
@@ -114,12 +116,17 @@ extension AddressView{
         self.recursive(dataArr: dataArr, province: province, city: city, area: area, street: street)
         
         if dataAddressModel != nil {
-            self.setData(data: dataAddressModel!)
+            if modelArray.count != 0 {
+                let model = modelArray.last as! RegionModel
+                self.setData(data: model)
+            }else{
+                self.setData(data: dataAddressModel!)
+            }
         }
-        selectedIndex = 0
-        if modelArray.count == 0 {
+        if modelArray.count < 4 {
             modelArray.append("请选择")
         }
+        selectedIndex = modelArray.firstIndex{$0 is String} ?? 0
         self.loadUI()
     }
     
@@ -134,12 +141,6 @@ extension AddressView{
                 break
             }
         }
-    }
-}
-
-extension AddressView{
-    @objc func actionForClose(){
-        self.removeFromSuperview()
     }
 }
 
@@ -398,5 +399,9 @@ extension AddressView{
         if self.layer.contains(p) {
             self.removeFromSuperview()
         }
+    }
+    
+    @objc func actionForClose(){
+        self.removeFromSuperview()
     }
 }

@@ -66,9 +66,9 @@ class ViewController: UIViewController {
         let str = titleLb.text!
         let arr = str.components(separatedBy: " ")
         // 带地址传入
-        //addressView.traverse(province: arr[0] , city: arr[1], area: arr[2], street: arr[3])
+        addressView.traverse(province: arr[0] , city: arr[1], area: "", street: "")
         // 不带地址传入
-        addressView.traverse(province: "" , city: "" , area: "" , street: "" )
+        //addressView.traverse(province: "" , city: "" , area: "" , street: "" )
     }
 }
 
