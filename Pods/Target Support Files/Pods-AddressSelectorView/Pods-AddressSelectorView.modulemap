@@ -1,0 +1,6 @@
+module Pods_AddressSelectorView {
+  umbrella header "Pods-AddressSelectorView-umbrella.h"
+
+  export *
+  module * { export * }
+}

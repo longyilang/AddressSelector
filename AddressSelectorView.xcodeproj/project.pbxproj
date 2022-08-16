@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60CAAB4FA6454D5A60E34354 /* libPods-AddressSelectorView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 371B7B842E19FFD6F5B82EFC /* libPods-AddressSelectorView.a */; };
+		96E6E1EB28AB44A30050CB20 /* city-new.json in Resources */ = {isa = PBXBuildFile; fileRef = 96E6E1EA28AB44A30050CB20 /* city-new.json */; };
 		96EACB1227DAF5C700AEDF73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EACB1127DAF5C700AEDF73 /* AppDelegate.swift */; };
 		96EACB1427DAF5C700AEDF73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EACB1327DAF5C700AEDF73 /* SceneDelegate.swift */; };
 		96EACB1627DAF5C700AEDF73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EACB1527DAF5C700AEDF73 /* ViewController.swift */; };
@@ -16,6 +18,13 @@
 		96EACB2927DAF5C800AEDF73 /* AddressSelectorViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EACB2827DAF5C800AEDF73 /* AddressSelectorViewTests.swift */; };
 		96EACB3327DAF5C800AEDF73 /* AddressSelectorViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EACB3227DAF5C800AEDF73 /* AddressSelectorViewUITests.swift */; };
 		96EACB3527DAF5C800AEDF73 /* AddressSelectorViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EACB3427DAF5C800AEDF73 /* AddressSelectorViewUITestsLaunchTests.swift */; };
+		96EACB4427DAF62500AEDF73 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EACB4327DAF62500AEDF73 /* AddressModel.swift */; };
+		96EACB4627DAF63B00AEDF73 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EACB4527DAF63B00AEDF73 /* AddressView.swift */; };
+		96EACB4A27DB401100AEDF73 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EACB4927DB401100AEDF73 /* AddressCell.swift */; };
+		96EACB4C27DB402600AEDF73 /* AddressSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EACB4B27DB402600AEDF73 /* AddressSelectorCell.swift */; };
+		96EACB4E27DB404D00AEDF73 /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EACB4D27DB404D00AEDF73 /* PrefixHeader.swift */; };
+		96EACB5027DB42C800AEDF73 /* APPConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EACB4F27DB42C800AEDF73 /* APPConfig.swift */; };
+		96EACB5227DB485200AEDF73 /* String+Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EACB5127DB485200AEDF73 /* String+Length.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		371B7B842E19FFD6F5B82EFC /* libPods-AddressSelectorView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AddressSelectorView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		647617DE41CE04439F5D3101 /* Pods-AddressSelectorView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddressSelectorView.debug.xcconfig"; path = "Target Support Files/Pods-AddressSelectorView/Pods-AddressSelectorView.debug.xcconfig"; sourceTree = "<group>"; };
+		96E6E1EA28AB44A30050CB20 /* city-new.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "city-new.json"; sourceTree = "<group>"; };
 		96EACB0E27DAF5C700AEDF73 /* AddressSelectorView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressSelectorView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EACB1127DAF5C700AEDF73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96EACB1327DAF5C700AEDF73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +61,14 @@
 		96EACB2E27DAF5C800AEDF73 /* AddressSelectorViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AddressSelectorViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EACB3227DAF5C800AEDF73 /* AddressSelectorViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSelectorViewUITests.swift; sourceTree = "<group>"; };
 		96EACB3427DAF5C800AEDF73 /* AddressSelectorViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSelectorViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		96EACB4327DAF62500AEDF73 /* AddressModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
+		96EACB4527DAF63B00AEDF73 /* AddressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		96EACB4927DB401100AEDF73 /* AddressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
+		96EACB4B27DB402600AEDF73 /* AddressSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressSelectorCell.swift; sourceTree = "<group>"; };
+		96EACB4D27DB404D00AEDF73 /* PrefixHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
+		96EACB4F27DB42C800AEDF73 /* APPConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APPConfig.swift; sourceTree = "<group>"; };
+		96EACB5127DB485200AEDF73 /* String+Length.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Length.swift"; sourceTree = "<group>"; };
+		98C7F9C200A66E66B7BB0511 /* Pods-AddressSelectorView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddressSelectorView.release.xcconfig"; path = "Target Support Files/Pods-AddressSelectorView/Pods-AddressSelectorView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60CAAB4FA6454D5A60E34354 /* libPods-AddressSelectorView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +104,8 @@
 				96EACB2727DAF5C800AEDF73 /* AddressSelectorViewTests */,
 				96EACB3127DAF5C800AEDF73 /* AddressSelectorViewUITests */,
 				96EACB0F27DAF5C700AEDF73 /* Products */,
+				AC8A324FBFFF496DB43FFC9A /* Pods */,
+				9F98B9502A8CB4CAA0D8446B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +125,14 @@
 				96EACB1127DAF5C700AEDF73 /* AppDelegate.swift */,
 				96EACB1327DAF5C700AEDF73 /* SceneDelegate.swift */,
 				96EACB1527DAF5C700AEDF73 /* ViewController.swift */,
+				96EACB4327DAF62500AEDF73 /* AddressModel.swift */,
+				96EACB4527DAF63B00AEDF73 /* AddressView.swift */,
+				96EACB4927DB401100AEDF73 /* AddressCell.swift */,
+				96EACB4B27DB402600AEDF73 /* AddressSelectorCell.swift */,
+				96EACB4D27DB404D00AEDF73 /* PrefixHeader.swift */,
+				96EACB4F27DB42C800AEDF73 /* APPConfig.swift */,
+				96EACB5127DB485200AEDF73 /* String+Length.swift */,
+				96E6E1EA28AB44A30050CB20 /* city-new.json */,
 				96EACB1727DAF5C700AEDF73 /* Main.storyboard */,
 				96EACB1A27DAF5C800AEDF73 /* Assets.xcassets */,
 				96EACB1C27DAF5C800AEDF73 /* LaunchScreen.storyboard */,
@@ -127,6 +158,23 @@
 			path = AddressSelectorViewUITests;
 			sourceTree = "<group>";
 		};
+		9F98B9502A8CB4CAA0D8446B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				371B7B842E19FFD6F5B82EFC /* libPods-AddressSelectorView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC8A324FBFFF496DB43FFC9A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				647617DE41CE04439F5D3101 /* Pods-AddressSelectorView.debug.xcconfig */,
+				98C7F9C200A66E66B7BB0511 /* Pods-AddressSelectorView.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +182,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96EACB3827DAF5C800AEDF73 /* Build configuration list for PBXNativeTarget "AddressSelectorView" */;
 			buildPhases = (
+				417058DDF48ED6166742BE0D /* [CP] Check Pods Manifest.lock */,
 				96EACB0A27DAF5C700AEDF73 /* Sources */,
 				96EACB0B27DAF5C700AEDF73 /* Frameworks */,
 				96EACB0C27DAF5C700AEDF73 /* Resources */,
@@ -232,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96EACB1E27DAF5C800AEDF73 /* LaunchScreen.storyboard in Resources */,
+				96E6E1EB28AB44A30050CB20 /* city-new.json in Resources */,
 				96EACB1B27DAF5C800AEDF73 /* Assets.xcassets in Resources */,
 				96EACB1927DAF5C700AEDF73 /* Main.storyboard in Resources */,
 			);
@@ -253,14 +303,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		417058DDF48ED6166742BE0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AddressSelectorView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		96EACB0A27DAF5C700AEDF73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EACB4427DAF62500AEDF73 /* AddressModel.swift in Sources */,
+				96EACB4A27DB401100AEDF73 /* AddressCell.swift in Sources */,
+				96EACB5227DB485200AEDF73 /* String+Length.swift in Sources */,
 				96EACB1627DAF5C700AEDF73 /* ViewController.swift in Sources */,
+				96EACB4C27DB402600AEDF73 /* AddressSelectorCell.swift in Sources */,
 				96EACB1227DAF5C700AEDF73 /* AppDelegate.swift in Sources */,
+				96EACB5027DB42C800AEDF73 /* APPConfig.swift in Sources */,
 				96EACB1427DAF5C700AEDF73 /* SceneDelegate.swift in Sources */,
+				96EACB4E27DB404D00AEDF73 /* PrefixHeader.swift in Sources */,
+				96EACB4627DAF63B00AEDF73 /* AddressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +516,7 @@
 		};
 		96EACB3927DAF5C800AEDF73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 647617DE41CE04439F5D3101 /* Pods-AddressSelectorView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -461,6 +544,7 @@
 		};
 		96EACB3A27DAF5C800AEDF73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98C7F9C200A66E66B7BB0511 /* Pods-AddressSelectorView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
