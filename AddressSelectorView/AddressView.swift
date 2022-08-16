@@ -125,23 +125,12 @@ extension AddressView{
     
     func recursive(dataArr: [RegionModel], province: String, city: String, area: String, street: String){
         for model in dataArr{
-            if model.name.contains(province) {
+            if model.name.contains(province) ||
+                model.name.contains(city) ||
+                model.name.contains(area) ||
+                model.name.contains(street){
                 modelArray.append(model)
                 self.recursive(dataArr: model.children, province: province, city: city, area: area, street: street)
-                break
-            }
-            if model.name.contains(city){
-                modelArray.append(model)
-                self.recursive(dataArr: model.children, province: province, city: city, area: area, street: street)
-                break
-            }
-            if model.name.contains(area){
-                modelArray.append(model)
-                self.recursive(dataArr: model.children, province: province, city: city, area: area, street: street)
-                break
-            }
-            if model.name.contains(street){
-                modelArray.append(model)
                 break
             }
         }
@@ -233,7 +222,15 @@ extension AddressView: UITableViewDelegate,UITableViewDataSource{
                 let tmp = model as! RegionModel
                 cell.titleLb.text = tmp.name
             }else{
-                cell.titleLb.text = model as? String
+                if indexPath.row == 1 {
+                    cell.titleLb.text = "请选择城市"
+                }else if indexPath.row == 2 {
+                    cell.titleLb.text = "请选择县"
+                }else if indexPath.row == 3{
+                    cell.titleLb.text = "请选街道"
+                }else{
+                    cell.titleLb.text = ""//model as? String
+                }
             }
             
             if indexPath.row == 0 {
