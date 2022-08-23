@@ -14,7 +14,7 @@ class AddressSelectorCell: UITableViewCell {
     //索引
     lazy var indexLb: UILabel = {
         let label = UILabel()
-        label.font = .pingFangRegular(size: 12.0)
+        label.font = .pingFangMedium(size: 12)
         label.textColor = UIColor.init(hex: "#9B9DA7")
         return label
     }()
@@ -22,7 +22,7 @@ class AddressSelectorCell: UITableViewCell {
     //名称
     lazy var nameLb: UILabel = {
         let label = UILabel()
-        label.font = .pingFangRegular(size: 14.0)
+        label.font = .pingFangMedium(size: 14)
         label.textColor = UIColor.init(hex: "#3B4058")
         return label
     }()

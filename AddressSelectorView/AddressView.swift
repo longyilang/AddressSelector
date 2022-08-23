@@ -65,7 +65,6 @@ extension AddressView{
             }else{
                 make.height.equalTo(96+modelArray.count*48)
             }
-            make.height.equalTo(96+modelArray.count*48)
         }
         self.tblView.reloadData()
     }
@@ -214,24 +213,14 @@ extension AddressView: UITableViewDelegate,UITableViewDataSource{
         if tblView == tableView {
             let cell = tableView.dequeueReusableCell(withIdentifier: AddressCell.identifier, for: indexPath) as! AddressCell
             let model = modelArray[indexPath.row]
+            cell.model = model
             if selectedIndex == indexPath.row {
                 cell.titleLb.textColor = UIColor.init(hex: "#409EFF")
             }else{
                 cell.titleLb.textColor = UIColor.init(hex: "#3B4058")
             }
-            if model is RegionModel {
-                let tmp = model as! RegionModel
-                cell.titleLb.text = tmp.name
-            }else{
-                if indexPath.row == 1 {
-                    cell.titleLb.text = "请选择城市"
-                }else if indexPath.row == 2 {
-                    cell.titleLb.text = "请选择县"
-                }else if indexPath.row == 3{
-                    cell.titleLb.text = "请选街道"
-                }else{
-                    cell.titleLb.text = ""//model as? String
-                }
+            if model is String {
+                cell.updateUI(indexPath: indexPath)
             }
             
             if indexPath.row == 0 {
@@ -255,6 +244,22 @@ extension AddressView: UITableViewDelegate,UITableViewDataSource{
             }else{
                 cell.indexLb.text = ""
             }
+            
+            let obj = modelArray[selectedIndex]
+            if obj is String {
+                cell.checkImgView.isHidden = true
+                cell.nameLb.textColor = UIColor.init(hex: "#3B4058")
+            }else{
+                let selectedModel = obj as! RegionModel
+                if selectedModel.name == model.name {
+                    cell.nameLb.textColor = UIColor.init(hex: "#409EFF")
+                    cell.checkImgView.isHidden = false
+                }else{
+                    cell.nameLb.textColor = UIColor.init(hex: "#3B4058")
+                    cell.checkImgView.isHidden = true
+                }
+            }
+            
             cell.nameLb.text = model.name
             return cell
         }
@@ -278,7 +283,9 @@ extension AddressView: UITableViewDelegate,UITableViewDataSource{
             
             let closeBtn: UIButton = {
                 let btn = UIButton()
-                btn.setImage(UIImage.init(named: "Work_delete"), for: .normal)
+                btn.setTitle("取消", for: .normal)
+                btn.setTitleColor(UIColor.init(hex: "#409EFF"), for: .normal)
+                btn.titleLabel?.font = .pingFangRegular(size: 16)
                 btn.addTarget(self, action: #selector(actionForClose), for: .touchUpInside)
                 return btn
             }()
@@ -314,6 +321,9 @@ extension AddressView: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         if tableView == tblView {
             let view = UIView.init(frame: CGRect.init(x: 0, y: 0, width: ScreenWidth, height: 48))
+            
+            let lineView = UIView()
+            lineView.backgroundColor = UIColor.init(hex: "#F6F6F6")
             let label = UILabel.init()
             label.font = .pingFangSemibold(size: 16)
             label.textColor = UIColor.init(hex: "#3B4058")
@@ -328,9 +338,16 @@ extension AddressView: UITableViewDelegate,UITableViewDataSource{
                 label.text = "选择街道/镇"
             }
             
+            view.addSubview(lineView)
             view.addSubview(label)
+            
+            lineView.snp.makeConstraints{make in
+                make.top.equalTo(4)
+                make.leading.trailing.equalTo(0)
+                make.height.equalTo(0.5)
+            }
             label.snp.makeConstraints{make in
-                make.top.equalTo(0)
+                make.top.equalTo(16)
                 make.leading.equalTo(8)
                 make.width.equalTo(150)
                 make.height.equalTo(30)

@@ -20,7 +20,7 @@ class AddressCell: UITableViewCell {
     
     lazy var titleLb: UILabel = {
         let label = UILabel()
-        label.font = .pingFangRegular(size: 14.0)
+        label.font = .pingFangMedium(size: 16)
         label.textColor = UIColor.init(hex: "#3B4058")
         return label
     }()
@@ -59,9 +59,6 @@ class AddressCell: UITableViewCell {
             if _model is RegionModel {
                 let tmp = _model as! RegionModel
                 titleLb.text = tmp.name
-            }else{
-                let tmp = _model as! String
-                titleLb.text = tmp
             }
         }
     }
@@ -148,4 +145,18 @@ class AddressCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+}
+
+extension AddressCell{
+    func updateUI(indexPath: IndexPath){
+        if indexPath.row == 1 {
+            titleLb.text = "请选择城市"
+        }else if indexPath.row == 2 {
+            titleLb.text = "请选择县"
+        }else if indexPath.row == 3{
+            titleLb.text = "请选街道"
+        }else{
+            titleLb.text = ""//model as? String
+        }
+    }
 }
