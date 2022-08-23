@@ -115,17 +115,20 @@ extension AddressView{
         self.recursive(dataArr: dataArr, province: province, city: city, area: area, street: street)
         
         if dataAddressModel != nil {
-            if modelArray.count != 0 {
+            if modelArray.count == 0 {
+                self.setData(data: dataAddressModel!)
+            }else if modelArray.count == 4{
+                let model = modelArray[2]
+                self.setData(data: model)
+            } else{
                 let model = modelArray.last as! RegionModel
                 self.setData(data: model)
-            }else{
-                self.setData(data: dataAddressModel!)
             }
         }
         if modelArray.count < 4 {
             modelArray.append("请选择")
         }
-        selectedIndex = modelArray.firstIndex{$0 is String} ?? 0
+        selectedIndex = modelArray.firstIndex{$0 is String} ?? modelArray.count-1
         self.loadUI()
     }
     
@@ -381,13 +384,21 @@ extension AddressView: UITableViewDelegate,UITableViewDataSource{
                 }
             }else{
                 modelArray[selectedIndex] = model
-                for i in (selectedIndex+1 ... modelArray.count-1).reversed(){
-                    if modelArray[i] is String {
-                        continue
+                let isContain = modelArray.contains(where: {$0 is String})
+                if isContain {
+                    for i in (selectedIndex+1 ... modelArray.count-1).reversed(){
+                        if modelArray[i] is String {
+                            continue
+                        }
+                        modelArray.remove(at: i)
                     }
-                    modelArray.remove(at: i)
+                } else if !isContain && selectedIndex != 3{
+                    for i in (selectedIndex+1 ... modelArray.count-1).reversed(){
+                        modelArray.remove(at: i)
+                    }
                 }
-                if !modelArray.contains(where: {$0 is String}){
+                
+                if modelArray.count < 4 && !modelArray.contains(where: {$0 is String}){
                     modelArray.append("请选择")
                 }
             }
